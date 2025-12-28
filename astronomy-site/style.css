@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    color: #f0edff;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(186, 155, 255, 0.25), transparent 40%),
+        radial-gradient(circle at 80% 10%, rgba(140, 120, 255, 0.25), transparent 45%),
+        linear-gradient(180deg, #1a0f2e, #0b0820, #05030f);
+    overflow-x: hidden;
+}
+
+
+/* зоряне тло */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image:
+        radial-gradient(1px 1px at 20px 30px, #fff, transparent),
+        radial-gradient(1px 1px at 100px 80px, #fff, transparent),
+        radial-gradient(1px 1px at 200px 120px, #fff, transparent),
+        radial-gradient(2px 2px at 300px 200px, #d6c9ff, transparent),
+        radial-gradient(1px 1px at 400px 50px, #fff, transparent);
+    background-size: 500px 500px;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+
+header {
+    padding: 16px;
+    text-align: center;
+}
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+
+nav a {
+    padding: 8px 14px;
+    border-radius: 20px;
+    background: rgba(180, 150, 255, 0.15);
+    color: #e6deff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+nav a:hover {
+    background: rgba(180, 150, 255, 0.3);
+}
+
+
+main {
+    max-width: 900px;
+    margin: auto;
+}
+
+
+.card {
+    background: rgba(20, 15, 50, 0.7);
+    margin: 16px;
+    padding: 18px;
+    border-radius: 16px;
+    box-shadow: 0 0 30px rgba(160, 130, 255, 0.15);
+}
+
+
+footer {
+    text-align: center;
+}
+
+/* 📱 АДАПТИВ ДЛЯ ТЕЛЕФОНІВ */
+@media (max-width: 768px) {
+
+  body {
+    font-size: 16px;
+  }
+
+  header {
+    padding: 12px;
+  }
+
+  header h1 {
+    font-size: 22px;
+  }
+
+  /* меню стає вертикальним */
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  nav a {
+    width: 90%;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  main {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .card {
+    margin: 12px 0;
+    padding: 14px;
+    border-radius: 14px;
+  }
+
+  .card h2 {
+    font-size: 20px;
+  }
+
+  .card p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  footer {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
